@@ -1,9 +1,3 @@
-
-//Big:   45     115
-
-//Small:  
-
-
 #define cont 39
 #define motorA1 40
 #define motorA2 41
@@ -410,21 +404,17 @@ void Servo_sweep(int Ang_from, int Ang_to, int delay_){
 
 
 int ServoSweepForward(int angle_from, int angle_to, int delay_){
-  //int x = millis();
   for(int pos = angle_from; pos <= angle_to; pos += 1){
     Serv.write(pos);
     delay(delay_);
   }
-  //counter11 = 1;
   return x;
 }
 
 int ServoSweepBackward(int angle_from, int angle_to, int delay_){
-  //int x = millis();
   for(int pos = angle_to; pos>=angle_from; pos-=1){                                
     Serv.write(pos);
     delay(delay_);
   }
-  //counter11 = 0;
   return x;
 }
